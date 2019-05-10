@@ -1,35 +1,22 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Startup from './src/views/Startup';
+
 import Home from './src/views/Home';
+import CreateNewDeck from './src/views/Home/CreateNewDeck'
+import NewDeckForm from './src/views/NewDeckForm';
 
-export default class App extends React.Component {
-  state = {
-    showLogo: true
-  }
+import { createAppContainer, createStackNavigator } from 'react-navigation';
 
-  componentDidMount () {
-    setTimeout(
-      () => this.setState({ showLogo: false }),
-      3000
-    );
-  }
-
-  render() {
-    return (
-      <View style={styles.container}>
-        {this.state.showLogo
-          ? <Startup />
-          : <Home />
-        }
-
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
+const AppNavigator = createStackNavigator({
+  Home: {
+    screen: Home,
   },
+  CreateNewDeck: {
+    screen: CreateNewDeck,
+  },
+  NewDeckForm: {
+    screen: NewDeckForm,
+  }
+}, {
+    initialRouteName: 'Home',
 });
+
+export default createAppContainer(AppNavigator);
