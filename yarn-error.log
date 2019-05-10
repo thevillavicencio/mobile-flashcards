@@ -2,7 +2,7 @@ Arguments:
   /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js start
 
 PATH: 
-  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/raul.velasco/Downloads
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/raul.velasco/Downloads:/Users/raul.velasco/Downloads
 
 Yarn version: 
   1.5.1
@@ -23,9 +23,11 @@ npm manifest:
       "eject": "expo eject"
     },
     "dependencies": {
+      "antd": "^3.17.0",
       "expo": "^32.0.0",
       "react": "16.5.0",
-      "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz"
+      "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+      "styled-components": "^4.2.0"
     },
     "devDependencies": {
       "babel-preset-expo": "^5.0.0"
